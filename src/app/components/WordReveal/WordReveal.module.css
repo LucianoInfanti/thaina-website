@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    font-style: italic;
+    overflow: hidden;
+    line-height: 1.1;
+    width: 90%;
+
+}
+
+.split {
+    font-size: 64px;
+    margin-right: 12px;
+    display: inline;
+    white-space: pre;
+}
+
+.splitting .line {
+	border: 1px solid red; /* Temporarily visualize line splits */
+	overflow: hidden;
+  }

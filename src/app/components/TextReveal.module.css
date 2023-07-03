@@ -1,0 +1,9 @@
+.container {
+	display: flex;
+	overflow: hidden;
+	line-height: 0.8;
+  }
+  
+  .split {
+	font-size: 32px;
+  }
