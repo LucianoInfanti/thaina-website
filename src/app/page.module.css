@@ -32,12 +32,14 @@
 
 .paragraph {
   font-size: 40px;
-  line-height: 115%;
+  line-height: 110%;
 }
 
 .firstParagraph {
   font-size: 64px;
-  line-height: 110%;
+  line-height: 100%;
+  letter-spacing: -0.4px;
+
 
 }
 
@@ -125,6 +127,9 @@
 
 .buttonWrapper {
   display: flex;
+  overflow: visible;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .contactButton {
@@ -133,7 +138,8 @@
   padding: 16px 24px;
   align-items: center;
   gap: 8px;
-  margin-right: 8px;
+
+
   color: #8E8686;
   font-size: 24px;
   font-family: NyghtSerif-Light;
@@ -142,17 +148,9 @@
   border-radius: 123px;
   border: 1px solid #8E8686;
   background: #2D3E38;
-  transition: transform 0.7s ease, margin-right 0.7s ease;
+  transition: transform 0.7s ease,  border-color 0.7s ease;
   overflow: hidden;
-}
 
-.contactButton:not(:first-child) {
-  margin-left: 0px;
-  transition: transform 0.7s ease, margin-right 0.7s ease, margin-left 0.7s ease;
-}
-
-.contactButton:not(:first-child):hover {
-  margin-left: 12px;
 }
 
 .contactButton::before {
@@ -171,9 +169,9 @@
 
 .contactButton:hover {
   cursor: pointer;
-  transform: scale(1.03);
-  margin-right: 12px;
-  /* adjust as needed */
+  /* transform: scale(1.03); */
+
+  border-color: white;
 }
 
 
@@ -209,4 +207,8 @@
   100% {
     transform: translateX(0);
   }
+}
+
+.highlight {
+  color: #EFCED5;
 }
