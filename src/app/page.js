@@ -22,34 +22,42 @@ export default function Home() {
     },
   };
 
+  const yMotionProps = {
+    ...motionProps,
+    initial: { ...motionProps.initial, y: 50 }, // adjust the y value as needed
+    whileInView: { ...motionProps.whileInView, y: 0 },
+  };
+
   return (
     <ScrollContainer>
       <GellyElement intensity="-2000">
         <main className={styles.main}>
-          <motion.section {...motionProps} className={styles.logo}>
-            <div className={styles.circle}></div>
+          <motion.section {...yMotionProps} className={styles.logo}>
+            <motion.div whileHover={{scale: 1.2}} className={styles.circle}></motion.div>
             <p>Thaina Lima</p>
           </motion.section>
 
           <section className={styles.content}>
             <motion.p
-              {...motionProps}
+             {...yMotionProps}
               className={`${styles.paragraph} ${styles.firstParagraph}`}
             >
-              Boas-vindas, Glauber e Gustavo! Sou Thaina 👋. Sou uma <span className={styles.highlight}>educadora{" "}</span>
+              Boas-vindas, Glauber e Gustavo! Sou Thaina 👋. Sou uma{" "}
+              <span className={styles.highlight}>educadora </span>
               de paixão e formação atuando há alguns anos na intersecção entre
               educação e tecnologia. Tenho 26 anos, virginiana e mãe do
               Sebastian 🐶.
             </motion.p>
 
-            <motion.p {...motionProps} className={styles.paragraph}>
-              Já coordenei equipes de CX, onde criei <span className={styles.highlight}>processos{" "}</span> e analisei de
+            <motion.p {...yMotionProps}className={styles.paragraph}>
+              Já coordenei equipes de CX, onde criei{" "}
+              <span className={styles.highlight}>processos </span> e analisei de
               dados para entender melhor nossos usuários e melhorar suas
               experiências. Ajudei a encontrar as melhores maneiras de atender
               nossos clientes e fazer com que se sintam ouvidos e valorizados.
             </motion.p>
 
-            <motion.p {...motionProps} className={styles.paragraph}>
+            <motion.p {...yMotionProps} className={styles.paragraph}>
               Seja na pesquisa de UX, design de serviços ou coordenação de CX,
               meu objetivo é sempre o mesmo: criar experiências que façam
               sentido para as pessoas. É isso que me move, é isso que me faz
@@ -107,8 +115,8 @@ export default function Home() {
                 href="mailto:thainacmlima@gmail.com"
                 target="_blank"
               >
-                <div className={styles.contactButton} data-text="Email">
-                  Email
+                <div className={styles.contactButton} data-text="E-mail">
+                  E-mail
                   <div className={styles.iconWrapper}>
                     <img
                       className={styles.icon}
@@ -140,7 +148,7 @@ export default function Home() {
 
             <motion.div {...motionProps} className={styles.footerWrapper}>
               <p className={styles.footerText}>Feito com</p>
-              <img src={"/Icons/heart.svg"} width={24} height={24} />
+              <motion.img  whileHover={{scale: 1.2}} src={"/Icons/heart.svg"} width={24} height={24} />
               <p className={styles.footerText}>por Thaina Lima</p>
             </motion.div>
           </section>
